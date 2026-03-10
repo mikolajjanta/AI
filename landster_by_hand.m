@@ -13,7 +13,7 @@ global Fmax;
 % PARAMETRY DOBIERANE INNDYWIDUALNIE:
 opoznienie_czasowe = 0.2;              % odstep czasowy pomiedzy krokami
 dH = 500;                              % wysokosc fragmentu przestrzeni pokazywanej na ekranie
-initial_states = [ 100 70 0;1000 1000 10; 400 2000 -25;700 3000 -50; 400 50 110];  % the set of initial states - each state in a row,
+stany_pocz = [ 100 70 0;1000 1000 10; 400 2000 -25;700 3000 -50; 400 50 110];  % the set of initial states - each state in a row,
 
                                      % kazdy stan opisany przez trojke [ilosc_paliwa, x, V]
 liczba_stanow_pocz = length(stany_pocz(:,1))                         
