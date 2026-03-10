@@ -4,7 +4,7 @@ Type='mamdani'
 Version=2.0
 NumInputs=3
 NumOutputs=1
-NumRules=22
+NumRules=26
 AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
@@ -15,60 +15,65 @@ DefuzzMethod='centroid'
 Name='fuel'
 Range=[0 1000]
 NumMFs=3
-MF1='Low':'trimf',[0 0 250]
-MF2='Medium':'trimf',[100 400 700]
-MF3='High':'trimf',[500 1000 1000]
+MF1='Low':'trimf',[0 0 200]
+MF2='Medium':'trimf',[50 350 650]
+MF3='High':'trimf',[400 1000 1000]
 
 [Input2]
 Name='height'
 Range=[0 5000]
 NumMFs=4
-MF1='VeryLow':'trimf',[0 0 50]
-MF2='Low':'trimf',[0 100 400]
-MF3='Medium':'trimf',[200 800 1500]
-MF4='High':'trimf',[1000 3000 5000]
+MF1='VeryLow':'trimf',[0 0 150]
+MF2='Low':'trimf',[50 300 600]
+MF3='Medium':'trimf',[400 1000 2000]
+MF4='High':'trimf',[1500 3500 5000]
 
 [Input3]
 Name='velocity'
 Range=[-200 200]
-NumMFs=5
-MF1='FastDown':'trimf',[-200 -200 -20]
-MF2='SlowDown':'trimf',[-40 -10 0]
-MF3='Zero':'trimf',[-5 0 5]
-MF4='SlowUp':'trimf',[0 10 40]
-MF5='FastUp':'trimf',[20 200 200]
+NumMFs=6
+MF1='FastDown':'trimf',[-200 -200 -40]
+MF2='MedDown':'trimf',[-60 -30 -10]
+MF3='SlowDown':'trimf',[-20 -8 0]
+MF4='Zero':'trimf',[-5 0 5]
+MF5='SlowUp':'trimf',[0 8 20]
+MF6='FastUp':'trimf',[10 200 200]
 
 [Output1]
 Name='force'
 Range=[0 17500]
 NumMFs=6
-MF1='None':'trimf',[0 0 1000]
-MF2='VeryLow':'trimf',[0 2000 5000]
-MF3='Low':'trimf',[2000 5000 9000]
-MF4='Medium':'trimf',[6000 10000 14000]
-MF5='High':'trimf',[10000 14500 17500]
-MF6='Max':'trimf',[15000 17500 17500]
+MF1='None':'trimf',[0 0 500]
+MF2='VeryLow':'trimf',[0 2000 4500]
+MF3='Low':'trimf',[2500 5500 8500]
+MF4='Medium':'trimf',[6000 9500 13000]
+MF5='High':'trimf',[10000 14000 17500]
+MF6='Max':'trimf',[14000 17500 17500]
 
 [Rules]
 0 1 1, 6 (1) : 1
-0 1 2, 5 (1) : 1
-0 1 3, 4 (1) : 1
-0 1 4, 3 (1) : 1
-0 1 5, 1 (1) : 1
+0 1 2, 6 (1) : 1
+0 1 3, 5 (1) : 1
+0 1 4, 4 (1) : 1
+0 1 5, 3 (1) : 1
+0 1 6, 1 (1) : 1
 0 2 1, 6 (1) : 1
 0 2 2, 5 (1) : 1
-0 2 3, 3 (1) : 1
-0 2 4, 1 (1) : 1
+0 2 3, 4 (1) : 1
+0 2 4, 3 (1) : 1
 0 2 5, 1 (1) : 1
+0 2 6, 1 (1) : 1
 0 3 1, 5 (1) : 1
-0 3 2, 3 (1) : 1
-0 3 3, 1 (1) : 1
+0 3 2, 4 (1) : 1
+0 3 3, 3 (1) : 1
 0 3 4, 1 (1) : 1
 0 3 5, 1 (1) : 1
+0 3 6, 1 (1) : 1
 0 4 1, 4 (1) : 1
-0 4 2, 2 (1) : 1
-0 4 3, 1 (1) : 1
+0 4 2, 3 (1) : 1
+0 4 3, 2 (1) : 1
 0 4 4, 1 (1) : 1
 0 4 5, 1 (1) : 1
+0 4 6, 1 (1) : 1
 1 4 0, 1 (1) : 1
 1 3 0, 1 (1) : 1
